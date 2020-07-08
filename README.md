@@ -3,6 +3,15 @@ This crate provides an attribute macro to implement `Fn` traits for any struct/e
 essentially enabling you to use it as a regular function/pass it like a closure or use it like an overloaded function.
 
 ~~(Please don't use this in any real-world project)~~
+## Why shouldn't I use this?
+If the fact that you have to enable unstable features still doesn't convince you,
+here's why you should stay away from this (or any other simillar patters) in any real project:
+- It introduces ambiguity - What does this code do? Where do I find the implementation? Why am I calling a struct?
+- It promotes rust anti-patterns - Rust doesn't allow you to, for example, overload functions in classical sense for a reason. You shouldn't try to do it.
+
+If you're still positive about using this in your project - I'm trurly sorry. And I hope you won't try to implement this in the real-world.
+
+Any more reasons not to use this are welcome.
 
 ## Example
 ```rust
