@@ -5,7 +5,7 @@ essentially enabling you to use it as a regular function/pass it like a closure 
 ~~(Please don't use this in any real-world project)~~
 ## Why shouldn't I use this?
 If the fact that you have to enable unstable features still doesn't convince you,
-here's why you should stay away from this (or any other simillar patters) in any real project:
+here's why you should stay away from this (or any other simillar patterns) in any real project:
 - It introduces ambiguity - What does this code do? Where do I find the implementation? Why am I calling a struct?
 - It promotes rust anti-patterns - Rust doesn't allow you to, for example, overload functions in classical sense for a reason. You shouldn't try to do it.
 
@@ -15,7 +15,7 @@ Any more reasons not to use this are welcome.
 
 ## Example
 ```rust
-#![feature(unboxed_closures, fn_traits)]
+#![feature(unboxed_closures, fn_traits, type_alias_impl_trait)]
 use functionate::functionate;
 
 #[derive(Debug)]
